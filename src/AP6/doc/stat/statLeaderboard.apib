@@ -1,0 +1,22 @@
+## Get Leaderboard [GET /stat/leaderboard{?allowDuplicates,showAnonymous}]
+
+Returns the leaderboard for the selected game mode. The leaderboard is sorted from the best-performing player to the lowest-performing player and is limited to the top 9 entries. If no leaderboard entries are available for the requested mode, the endpoint returns `503`.
+
++ Parameters
+    + allowDuplicates: `false` (boolean, required) - Whether to retrieve statistics for games that allowed duplicate colors.
+    + showAnonymous: `true` (boolean, required) - Whether to get also anonymous players.
+
++ Response 200 (application/json)
+    + Attributes (array[object], required)
+        + (object)
+            + id: `OlegPopov` (string, required) - Unique identifier of the player.
+            + guesses: 4 (number, required) - Number of guesses used to complete the game.
+            + duration: 18000 (number, required) - Time taken to complete the game in milliseconds.
+
++ Response 400 (text/plain)
+
+        Invalid data
+
++ Response 503 (text/plain)
+
+        No statistics available

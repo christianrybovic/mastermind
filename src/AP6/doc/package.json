@@ -1,0 +1,12 @@
+{
+    "name": "mastermind-api-v6",
+    "version": "6.0.0",
+    "license": "MIT",
+    "author": "Team Alpha",
+    "scripts": {
+        "build": "aglio -i index.apib -o restapi.v6.html"
+    },
+    "devDependencies": {
+        "aglio": "^2.3.0"
+    }
+}

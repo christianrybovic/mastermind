@@ -1,0 +1,16 @@
+{
+    "name": "mastermind-server-v3",
+    "version": "3.0.0",
+    "license": "MIT",
+    "author": "Team Alpha",
+    "type": "module",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "dependencies": {
+        "express": "^5.2.1",
+        "express-session": "^1.19.0",
+        "express-sessions": "^1.0.6"
+    }
+}

@@ -1,0 +1,14 @@
+### Create a new game [POST /game/create]
+
+Creates a new game. The request body contains the configuration options used to initialize the game, such as whether duplicate digits are allowed in the generated combination and whether the game is limited to 10 turns.
+
++ Request (application/json)
+    + Attributes (object)
+        + allowDuplicates: false (boolean, required) - Controls whether duplicate digits are allowed in the generated combination.
+        + endless: true (boolean, required) - When true, the game has no turn limit and continues until the correct combination is guessed.
+
++ Response 201
+
++ Response 400 (text/plain)
+
+        Invalid data

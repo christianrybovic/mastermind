@@ -1,0 +1,19 @@
+## Get Veteran Information [GET /stat/veteran{?allowDuplicates}]
+
+Returns the veteran player for the selected game mode. The veteran player is the player who has played the most games. If no statistics are available for the requested mode, the endpoint returns `503`.
+
++ Parameters
+    + allowDuplicates: `false` (boolean, required) - Whether to retrieve statistics for games that allowed duplicate colors.
+
++ Response 200 (application/json)
+    + Attributes (object)
+        + username: `OlegPopov` (string, required) - Username of the veteran player.
+        + maxCount: 42 (number, required) - Number of games played by the veteran player.
+
++ Response 400 (text/plain)
+
+        Invalid data
+
++ Response 503 (text/plain)
+
+        No statistics available

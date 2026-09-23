@@ -1,0 +1,17 @@
+### Join a room [POST /room/join]
+
+Joins an existing multiplayer room using its room ID.
+
++ Request (application/json)
+    + Attributes (object)
+        + roomId: `Number` (required) - A 4-digit room ID (`1000 <= roomId <= 9999`)
+
++ Response 200
+
++ Response 400 (text/plain)
+
+        Invalid data
+
++ Response 500 (text/plain)
+
+        Room error occurred

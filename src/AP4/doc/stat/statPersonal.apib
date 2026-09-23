@@ -1,0 +1,24 @@
+## Get Personal Statistics [GET /stat/personal{?allowDuplicates}]
+
+Returns the players statistics for the selected game mode. If no statistics are available for the requested mode, the endpoint returns `503`.
+
++ Parameters
+    + allowDuplicates: `false` (boolean, required) - Whether to retrieve statistics for games that allowed duplicate colors.
+
++ Response 200 (application/json)
+    + Attributes (object)
+        + longestDuration: 120000 (number, required) - Longest recorded game duration in milliseconds.
+        + shortestDuration: 15000 (number, required) - Shortest recorded game duration in milliseconds.
+        + averageDuration: 45000 (number, required) - Average game duration in milliseconds.
+        + mostGuesses: 12 (number, required) - Highest number of guesses used to complete a game.
+        + fewestGuesses: 3 (number, required) - Lowest number of guesses used to complete a game.
+        + averageGuesses: 6.8 (number, required) - Average number of guesses.
+        + count: 13.2 (number, required) - Global average games per player.
+
++ Response 400 (text/plain)
+
+        Invalid data
+
++ Response 503 (text/plain)
+
+        No statistics available

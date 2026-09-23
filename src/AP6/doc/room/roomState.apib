@@ -1,0 +1,22 @@
+### Get room state information [GET /room/state]
+
+Returns the current state of the multiplayer room, including its settings and the progress of other players.
+
++ Response 200
+    + Attributes (object)
+        + roomId: `1234` (number) - The room ID.
+        + action: `wait` (string) - The current room state (for example, `lobby`, `wait`, `play` or `end`).
+        + allowDuplicates: `false` (boolean) - Whether duplicate digits are allowed in the secret combination.
+        + players (array)
+            + (object)
+                + username: `OlegPopov` (string) - The players username.
+                + correctPosition: `2` (number) - Number of digits in the correct position from the players last guess.
+                + correctColor: `1` (number) - Number of correct digits in the wrong position from the players last guess.
+
++ Response 400 (text/plain)
+
+        Invalid data
+
++ Response 500 (text/plain)
+
+        Room error occurred

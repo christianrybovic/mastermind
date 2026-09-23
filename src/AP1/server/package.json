@@ -1,0 +1,14 @@
+{
+    "name": "mastermind-server-v1",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": "Team Alpha",
+    "type": "module",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "dependencies": {
+        "express": "^5.2.1"
+    }
+}

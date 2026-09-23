@@ -1,0 +1,25 @@
+### Make a guess [POST /game/guess]
+
+Submits a guess for an existing game. The request evaluates the provided guess against the secret combination and returns the result of the comparison.
+
++ Request (application/json)
+    + Attributes (object)
+        + combination: 5214 (string, required)  - The four-digit combination guess as string. The number must contain only the digits 1-6 and must be exactly 4 digits long.
++ Response 200 (application/json)
+    + Attributes (object)
+        + state: playing (enum[string], required) - Current state of the game.
+            + Members
+                + playing - The player can submit another guess.
+                + won - The player has guessed the correct combination.
+                + lost - The player has reached the maximum number of attempts and the game is over.
+        + colorAndPosition: 2 (number, required) - Correct color and position
+        + colorOnly: 1 (number, required) - Correct color only
+
++ Response 400 (text/plain)
+
+        Invalid data
+
+
++ Response 410 (text/plain)
+
+        Invalid state

@@ -1,0 +1,13 @@
+### Registers a user [POST /user/register]
+
+Registers a new user on the server.
+
++ Request (application/json)
+    + Attributes (object)
+        + username: `OlegPopov` (string, required) - The username must be between 1 and 9 characters long and may contain letters, numbers, hyphens (`-`), and underscores (`_`).
+
++ Response 200
+
++ Response 400 (text/plain)
+
+        Invalid data

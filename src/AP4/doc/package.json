@@ -1,0 +1,12 @@
+{
+    "name": "mastermind-api-v4",
+    "version": "4.0.0",
+    "license": "MIT",
+    "author": "Team Alpha",
+    "scripts": {
+        "build": "aglio -i index.apib -o restapi.v4.html"
+    },
+    "devDependencies": {
+        "aglio": "^2.3.0"
+    }
+}
