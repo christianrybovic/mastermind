@@ -3,6 +3,7 @@
 #
 # Licensed under the MIT License. See LICENSE file for details
 
+from mastermind_solver import Knuth
 from validator import Validator
 from restapi import Restapi
 from prompt import prompt
